@@ -1,23 +1,27 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
-import LoginPage from './Pages/LoginPage'
-import Layout from './components/Layout/Layout'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import LoginPage from './Pages/LoginPage';
+import Layout from './components/Layout/Layout';
+import Hero from './components/Hero/Hero';
+// import Meals from './components/Meals/Meals';
 
+import './App.css';
 
 const App = () => {
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
     <BrowserRouter>
       <Routes>
-          <Route path='/' element={<Layout/>}>
-            <Route path='login' element={<LoginPage/>}/>
-            <Route path='footer' element={<Footer/>} />
-          </Route>
+        <Route path="/login" element={!isLogin ? <LoginPage setIsLogin={setIsLogin} /> : <Navigate to="/" />} />
+        <Route path="/" element={isLogin ? <Layout setIsLogin={setIsLogin} /> : <Navigate to="/login" />} >
+          <Route index element={<Hero />} />
+          {/* <Route path="ovqatlar" element={<Meals />} /> */}
+        </Route>
+        <Route path="*" element={<Navigate to={isLogin ? "/" : "/login"} />} />
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

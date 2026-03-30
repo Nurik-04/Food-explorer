@@ -1,0 +1,139 @@
+.meals {
+    padding: 40px 0;
+    background-color: #000A0F;
+    /* Asosiy fon */
+    color: white;
+}
+
+.meals__title {
+    font-size: 32px;
+    margin-bottom: 23px;
+    font-weight: 500;
+}
+
+.meal__box {
+    background: #00070A;
+    border: 1px solid #000204;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.meal__wishlist {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.meal__img {
+    width: 176px;
+    height: 176px;
+    margin: 0 auto 16px;
+    object-fit: contain;
+}
+
+.meal__name {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.meal__description {
+    font-size: 14px;
+    color: #C4C4CC;
+    margin-bottom: 16px;
+    height: 40px;
+    /* Matn bir xil turishi uchun */
+    overflow: hidden;
+}
+
+.meal__price {
+    display: block;
+    font-size: 32px;
+    color: #82F3FF;
+    margin-bottom: 16px;
+}
+
+.meal__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.meal__counter {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.meal__counter-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.meal__counter-number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.meal__btn {
+    background: #750310;
+    /* Figma red */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Swiper strelkalarini sozlash */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    top: 50% !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 24px !important;
+}
+
+/* Slaydlar o'tish paytida qisirlab qolmasligi uchun */
+.swiper-wrapper {
+    transition-timing-function: ease-out;
+    /* Harakat oxirida sekinlashadi */
+}
+
+/* Kartochkaga sichqoncha borganda (hover) silliq kattalashish */
+.meal__box {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    will-change: transform;
+    /* Brauzerga animatsiyaga tayyor turishni aytadi */
+}
+
+.meal__box:hover {
+    transform: translateY(-5px) scale(1.02);
+    /* Biroz yuqoriga va kattalashadi */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Strelkalarni bosganda silliq ishlashi */
+.swiper-button-next,
+.swiper-button-prev {
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+    transform: scale(1.1) translateY(-50%);
+    /* Kattalashish */
+}
