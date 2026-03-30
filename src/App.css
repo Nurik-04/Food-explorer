@@ -1,0 +1,17 @@
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #000A0F;
+  color: #ffffff;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
