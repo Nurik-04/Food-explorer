@@ -13,7 +13,7 @@ const LoginPage = ({setIsLogin}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(name, email, password);
-        if (name === "Maria" && email === "maria@example.com" && password === "000000") {
+        if (name === "Maria" && email === "maria@example.com" && password === "123456") {
             console.log("Login successful");
             setIsLogin(true)    
             
@@ -53,7 +53,7 @@ const LoginPage = ({setIsLogin}) => {
                     />
                 </div>
                 <div>
-                    <label className='login__lable' htmlFor="password">Senha: <span className='login__span'>000000</span></label>
+                    <label className='login__lable' htmlFor="password">Senha: <span className='login__span'>123456</span></label>
                     <input
                         type="password"
                         id='password'
