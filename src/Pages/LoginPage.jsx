@@ -13,13 +13,14 @@ const LoginPage = ({setIsLogin}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(name, email, password);
-        if (name === "Maria" && email === "maria@example.com" && password === "123456") {
-            alert("Login successful");
+        if (name === "Maria" && email === "maria@example.com" && password === "000000") {
+            console.log("Login successful");
             setIsLogin(true)    
             
             navigate('/');
         } else {
             alert("Invalid credentials");
+            console.error("Invalid credentials");
         }
     }
     return (
@@ -52,10 +53,10 @@ const LoginPage = ({setIsLogin}) => {
                     />
                 </div>
                 <div>
-                    <label className='login__lable' htmlFor="pasvort">Senha: <span className='login__span'>123456</span></label>
+                    <label className='login__lable' htmlFor="password">Senha: <span className='login__span'>000000</span></label>
                     <input
-                        type="text"
-                        id='pasvort'
+                        type="password"
+                        id='password'
                         placeholder='No mínimo 6 caracteres'
                         required
                         className='login__input'

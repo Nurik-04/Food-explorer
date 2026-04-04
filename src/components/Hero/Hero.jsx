@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero_img from '../images/hero.png';
 import Meals from '../Meals/Meals';
+import Sweets from '../Meals/Sweets';
+import Drinks from '../Meals/Drinks';
 import './Hero.css';
 
 const Hero = () => {
@@ -16,6 +18,8 @@ const Hero = () => {
             </div>
         </div>
         <Meals />
+        <Sweets />
+        <Drinks />
     </div>
     )
 }

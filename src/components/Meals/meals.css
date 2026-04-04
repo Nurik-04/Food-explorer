@@ -1,33 +1,37 @@
+/* Konteyner va Slayder o'rami */
+.meals-section {
+    padding: 50px 0;
+    background: #000A0F;
+}
+
 .meals__container {
     width: 100%;
-    height: 530px;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .meals__title {
-    font-family: Poppins, Roboto;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-style: Medium;
     font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
 }
 
-.mealt__list {
+.slider-wrapper {
     width: 100%;
-    height: 462px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ff3d3d;
+    position: relative;
 }
 
+/* Kartochkalar orasidagi masofa */
+.slider__item {
+    padding: 0 13px;
+    outline: none;
+}
+
+/* Meal Card Stili */
 .meal__card {
-    width: 304px;
-    height: 100%;
-    border: 1px solid #ccc;
-    /* border: 1px solid #000204 */
+    width: 100% !important;
+    min-height: 460px;
+    border: 1px solid #1c2227;
     border-radius: 8px;
     padding: 24px;
     background: #00070A;
@@ -35,11 +39,152 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    transition: border 0.3s ease;
 }
-.meal__img{
+
+.meal__card:hover {
+    border-color: #82F3FF;
+}
+
+/* Rasm Animatsiyasi */
+.meal__img {
     width: 176px;
     height: 176px;
-    border: 1px solid #ccc;
+    border: 2px solid #82F3FF;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: smoothSpring 3.8s linear infinite;
+    animation-play-state: paused;
+    will-change: transform;
 }
 
+.meal__card:hover .meal__img {
+    animation-play-state: running;
+}
 
+@keyframes smoothSpring {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Matnlar */
+.meal__name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #E1E1E6;
+    margin-top: 15px;
+}
+
+.meal__description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #C4C4CC;
+    line-height: 160%;
+    margin: 10px 0;
+}
+
+.meal__price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    color: #82F3FF;
+    margin-bottom: 15px;
+}
+
+/* Footer va Tugmalar */
+.meal__footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.meal__caunter {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+.meal__caunter:hover {
+    border: 1px solid #82F3FF;
+    box-shadow: 0px 0px 20px rgba(130, 243, 255, 0.3);
+}
+
+.meal__caunter-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.meal__caunter-btn:hover {
+    color: #4cef75;
+}
+
+.meal__btn {
+    background-color: #750310;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: #ab273b 0px 5px 0px 0px;
+    transition: all 0.2s ease;
+}
+
+.meal__btn:hover {
+    box-shadow: #c92e46 0px 3px 0px 0px;
+}
+
+.meal__btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* Slick Arrow Stili */
+.slick-prev:before,
+.slick-next:before {
+    font-size: 50px;
+    color: white;
+}
+
+/* Chap tomondagi strelka */
+.slick-prev {
+    left: 30px !important;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+}
+
+/* Ong tomondagi strelka */
+.slick-next {
+    right: 30px !important;
+    z-index: 10;
+    height: 45px;
+    height: 45px;
+}
+.sweets-section {
+    margin-top: 48px;        
+    margin-bottom: 48px;
+}
+.drinks-section {
+    margin-top: 48px;
+    margin-bottom: 80px; /* Eng pastki qismda ko'proq joy tashlaymiz */
+}
