@@ -1,0 +1,45 @@
+.meals__container {
+    width: 100%;
+    height: 530px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meals__title {
+    font-family: Poppins, Roboto;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 32px;
+}
+
+.mealt__list {
+    width: 100%;
+    height: 462px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ff3d3d;
+}
+
+.meal__card {
+    width: 304px;
+    height: 100%;
+    border: 1px solid #ccc;
+    /* border: 1px solid #000204 */
+    border-radius: 8px;
+    padding: 24px;
+    background: #00070A;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.meal__img{
+    width: 176px;
+    height: 176px;
+    border: 1px solid #ccc;
+}
+
+
