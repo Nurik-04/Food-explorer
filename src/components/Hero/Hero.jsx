@@ -3,7 +3,7 @@ import Hero_img from '../images/hero.png';
 import Meals from '../Meals/Meals';
 import Sweets from '../Meals/Sweets';
 import Drinks from '../Meals/Drinks';
-import './Hero.css';
+import './hero.css';
 
 const Hero = () => {
     return (
