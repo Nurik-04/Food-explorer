@@ -9,8 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-left: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
+    border-left: 1px solid #82F3FF;
+    border-right: 1px solid #82F3FF;
     padding: 24px 123px;
 }
 .footer__logo{

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './Pages/LoginPage';
 import Layout from './components/Layout/Layout';
 import Hero from './components/Hero/Hero';
-// import Meals from './components/Meals/Meals';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 
 import './App.css';
 
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/login" element={!isLogin ? <LoginPage setIsLogin={setIsLogin} /> : <Navigate to="/" />} />
         <Route path="/" element={isLogin ? <Layout setIsLogin={setIsLogin} /> : <Navigate to="/login" />} >
           <Route index element={<Hero />} />
-          {/* <Route path="ovqatlar" element={<Meals />} /> */}
+          <Route path="product/:id" element={<ProductDetails />} />
         </Route>
         <Route path="*" element={<Navigate to={isLogin ? "/" : "/login"} />} />
       </Routes>

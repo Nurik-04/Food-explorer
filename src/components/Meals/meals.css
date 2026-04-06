@@ -13,26 +13,31 @@
     font-weight: 500;
     font-size: 32px;
     color: white;
-    margin-bottom: 30px;
+    margin-left: 20px;
+    padding-left: 7px;
 }
-
+.meals__title:hover {
+    color: #82F3FF;
+    border-left: 5px solid #82F3FF;
+    transition: color 0.3s ease;
+}   
 .slider-wrapper {
     width: 100%;
     position: relative;
+    padding-top: 30px;
 }
 
-/* Kartochkalar orasidagi masofa */
 .slider__item {
     padding: 0 13px;
     outline: none;
+    padding-top: 20px;
 }
 
-/* Meal Card Stili */
 .meal__card {
     width: 100% !important;
     min-height: 460px;
     border: 1px solid #1c2227;
-    border-radius: 8px;
+    border-radius: 18px;
     padding: 24px;
     background: #00070A;
     text-align: center;
@@ -40,14 +45,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    transition: border 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: border-color 0.3s ease, transform 0.4s ease-out; 
 }
 
 .meal__card:hover {
     border-color: #82F3FF;
+    transform: translateY(-15px) ;
+    box-shadow: 0px 10px 40px rgba(130, 243, 255, 0.2);
 }
 
-/* Rasm Animatsiyasi */
 .meal__img {
     width: 176px;
     height: 176px;
@@ -57,6 +64,7 @@
     animation: smoothSpring 3.8s linear infinite;
     animation-play-state: paused;
     will-change: transform;
+    cursor: pointer;
 }
 
 .meal__card:hover .meal__img {
@@ -83,6 +91,7 @@
     font-size: 24px;
     color: #E1E1E6;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .meal__description {
@@ -180,11 +189,14 @@
     height: 45px;
     height: 45px;
 }
+
 .sweets-section {
-    margin-top: 48px;        
+    margin-top: 48px;
     margin-bottom: 48px;
 }
+
 .drinks-section {
     margin-top: 48px;
-    margin-bottom: 80px; /* Eng pastki qismda ko'proq joy tashlaymiz */
+    margin-bottom: 80px;
+    /* Eng pastki qismda ko'proq joy tashlaymiz */
 }

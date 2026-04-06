@@ -1,4 +1,4 @@
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,20 +7,23 @@
     background-color: #00111A;
     /* margin-bottom: 105px; */
 }
-.header__nav{
+
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    height: 104px;
+    border-left: 1px solid #82F3FF;
+    border-right: 1px solid #82F3FF;
+    height: 80px;
 }
-.header__logo{
+
+.header__logo {
     width: 197px;
     height: 30px;
 }
-.header__form{
+
+.header__form {
     width: 550px;
     height: 48px;
     padding: 12px 14px;
@@ -31,12 +34,14 @@
     align-items: center;
     justify-content: center;
 }
-.header__input__icon{
+
+.header__input__icon {
     width: 24px;
     height: 24px;
     color: #C4C4CC;
 }
-.header__input{
+
+.header__input {
     font-family: Roboto;
     font-weight: 400;
     font-style: Regular;
@@ -44,9 +49,10 @@
     width: 344px;
     height: 100%;
 }
-.header__btn{
-    width: 200px;
-    height: 56px;
+
+.header__btn {
+    width: 160px;
+    height: 40px;
     padding: 12px 32px;
     gap: 8px;
     border-radius: 5px;
@@ -61,23 +67,24 @@
     font-weight: 500;
     font-style: Medium;
     font-size: 14px;
-
+    margin-bottom: 10px;
 }
-/* From Uiverse.io by absoluteSTrange */ 
+
+/* From Uiverse.io by absoluteSTrange */
 
 .header__btn:hover {
-  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
 }
 
 .header__btn:active {
-  background-color: rgb(255, 56, 86);
-  /*50, 168, 80*/
-  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
-  transform: translateY(5px);
-  transition: 200ms;
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
 }
 
-.header__exit__icon{
+.header__exit__icon {
     width: 32px;
     height: 32px;
     color: #FFFFFF;
