@@ -6,9 +6,14 @@ import { ichimliklar } from '../../data'; // Ma'lumotlarni data faylidan olish
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../Meals/meals.css'; // Mavjud stillarni ishlatamiz
+import { useNavigate } from 'react-router-dom';
 
 // 1. Har bir ichimlik kartochkasi uchun alohida komponent
 const DrinksCard = ({ el }) => {
+    const navigate = useNavigate();
+    const goTODetails = () => {
+        navigate(`/product/${el.id}`);
+    };
     const [count, setCount] = useState(1);
 
     const inc = () => setCount(count + 1);
@@ -18,8 +23,13 @@ const DrinksCard = ({ el }) => {
 
     return (
         <div className="meal__card">
-            <img src={el.image} alt={el.name} className="meal__img" />
-            <h3 className="meal__name">{el.name}</h3>
+            <img
+                src={el.image}
+                alt={el.name}
+                className="meal__img" 
+                onClick={goTODetails}
+                />
+            <h3 className="meal__name" onClick={goTODetails}>{el.name}</h3>
             <p className="meal__description">{el.description}</p>
 
             {/* Narxni miqdorga ko'paytirib ko'rsatish */}
@@ -31,7 +41,12 @@ const DrinksCard = ({ el }) => {
                     <span className='meal__caunter-number'>{count}</span>
                     <button onClick={inc} className='meal__caunter-btn'>+</button>
                 </div>
-                <button className="meal__btn">{el.btn}</button>
+                <button 
+                    className="meal__btn"
+                    onClick={goTODetails}
+                >
+                    {el.btn}
+                </button>
             </div>
         </div>
     );

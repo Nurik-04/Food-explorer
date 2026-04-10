@@ -45,7 +45,7 @@ export const ovqatlar = [
 ];
 export const shirinliklar = [
     {
-        id: 1,
+        id: 5,
         name: "Prugna Pie >",
         description: "Torta de ameixa com massa amanteigada, polvilho em açúcar.",
         price: 79.97,
@@ -53,7 +53,7 @@ export const shirinliklar = [
         btn: "incluir"
     },
     {
-        id: 2,
+        id: 6,
         name: "Peachy pastrie >",
         description: "Delicioso folheado de pêssego com folhas de hortelã. ",
         price: 32.97,
@@ -61,7 +61,7 @@ export const shirinliklar = [
         btn: "incluir"
     },
     {
-        id: 3,
+        id: 7,
         name: "Macarons  >",
         description: "Farinha de amêndoas, manteiga, claras e açúcar.",
         price: 79.97,
@@ -69,7 +69,7 @@ export const shirinliklar = [
         btn: "incluir"
     },
     {
-        id: 4,
+        id: 8,
         name: "Bolo de damasco  >",
         description: "Damascos frescos em uma massa sem glúten. ",
         price: 19.97,
@@ -79,7 +79,7 @@ export const shirinliklar = [
 ];
 export const ichimliklar = [
     {
-        id: 1,
+        id: 9,
         name: "Espresso >",
         description: "Café cremoso feito na temperatura e pressões perfeitas.",
         price: 15.97,
@@ -87,7 +87,7 @@ export const ichimliklar = [
         btn: "incluir"
     },
     {
-        id: 2,
+        id: 10,
         name: "Suco de maracujá >",
         description: "Suco de maracujá gelado, cremoso, docinho. ",
         price: 13.97,
@@ -95,7 +95,7 @@ export const ichimliklar = [
         btn: "incluir"
     },
     {
-        id: 3,
+        id: 11,
         name: "Tè d'autunno >",
         description: "Chá de anis, canela e limão. Sinta o outono italiano.",
         price: 19.97,
@@ -103,7 +103,7 @@ export const ichimliklar = [
         btn: "incluir"
     },
     {
-        id: 4,
+        id: 12,
         name: "Pomo bourbon  >",
         description: "Maçã, whisky, canela. On the rocks.",
         price: 29.97,

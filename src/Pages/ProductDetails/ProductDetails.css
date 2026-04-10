@@ -1,0 +1,48 @@
+.product__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product__img__box {
+    width: 390px;
+    height: 465px;
+    border: 1px solid #E1E1E1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.product__set-back {
+    width: 106px;
+    height: 34px;
+    color: #E1E1E6;
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.product__img {
+    width: 390.11px;
+    height: 389px;
+    /* Animatsiya nomi, davomiyligi (10s), aylanish uslubi (linear) va cheksizligi (infinite) */
+    animation: rotate-spring 10s linear infinite;
+    transition: transform 0.5s ease-out;
+    border: 2px solid #82F3FF;
+    border-radius: 50%;
+}
+
+@keyframes rotate-spring {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

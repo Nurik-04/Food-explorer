@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
 import { shirinliklar } from '../../data';
+import { useNavigate } from 'react-router-dom';
 
 // Slick carousel uchun zaruriy stillar
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './meals.css';
 
+
 // DIQQAT: ( { el } ) qismi qo'shildi, aks holda el.image xato beradi
 const SweetsCard = ({ el }) => {
+    const navigate = useNavigate();
+    const goTODetails = () => {
+        navigate(`/product/${el.id}`);
+    };
     const [count, setCount] = useState(1);
 
     const inc = () => setCount(count + 1);
@@ -18,8 +24,13 @@ const SweetsCard = ({ el }) => {
 
     return (
         <div className="meal__card">
-            <img src={el.image} alt={el.name} className="meal__img" />
-            <h3 className="meal__name">{el.name}</h3>
+            <img
+                src={el.image}
+                alt={el.name}
+                className="meal__img"
+                onClick={goTODetails}
+                />
+            <h3 className="meal__name" onClick={goTODetails}>{el.name}</h3>
             <p className="meal__description">{el.description}</p>
 
             <span className="meal__price">R$ {(el.price * count).toFixed(2)}</span>
@@ -30,7 +41,10 @@ const SweetsCard = ({ el }) => {
                     <span className='meal__caunter-number'>{count}</span>
                     <button onClick={inc} className='meal__caunter-btn'>+</button>
                 </div>
-                <button className="meal__btn">{el.btn}</button>
+                <button
+                    className="meal__btn"
+                    onClick={goTODetails}
+                >{el.btn}</button>
             </div>
         </div>
     );

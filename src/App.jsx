@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/login" element={!isLogin ? <LoginPage setIsLogin={setIsLogin} /> : <Navigate to="/" />} />
         <Route path="/" element={isLogin ? <Layout setIsLogin={setIsLogin} /> : <Navigate to="/login" />} >
           <Route index element={<Hero />} />
-          <Route path="product/:id" element={<ProductDetails />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Route>
         <Route path="*" element={<Navigate to={isLogin ? "/" : "/login"} />} />
       </Routes>
