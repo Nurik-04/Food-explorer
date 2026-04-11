@@ -9,7 +9,7 @@
 .product__img__box {
     width: 390px;
     height: 465px;
-    border: 1px solid #E1E1E1;
+    /* border: 1px solid #E1E1E1; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,4 +45,120 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.product__text__box {
+    width: 687px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product__title {
+    font-family: roboto;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    color: #E1E1E6;
+}
+
+.product__description {
+    width: 687px;
+    height: 68px;
+    font-family: roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    color: #E1E1E6;
+}
+
+.product__ingredients {
+    width: 488px;
+    height: 32px;
+    gap: 12px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.product__ingredient {
+    gap: 8px;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #192227;
+    border: 1px solid #82F3FF;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.product__ingredient:hover {
+    background: #7adee9;
+    color: #010101;
+    border: 1px solid #192227;
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: -5px 5px 100px #82F3FF;
+}
+
+.product__footer {
+    width: 294px;
+    height: 48px;
+    gap: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__caunter__box {
+    width: 99px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product__caunter-btn {
+    font-size: 30px;
+}
+
+.product__caunter-btn:hover {
+    color: #4cef75;
+}
+
+.product__caunt {
+    font-size: 24px;
+}
+
+.product__btn {
+    width: 162px;
+    height: 48px;
+    border-radius: 5px;
+    font-family: roboto;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #750310;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: rgb(171, 39, 59) 0px 10px 0px 0px;
+    margin-bottom: 5px;
+}
+
+.product__btn:hover {
+    box-shadow: rgb(171, 39, 59) 0px 8px 0px 0px;
+}
+
+.product__btn:active {
+    box-shadow: rgb(171, 39, 59) 0px 5px 0px 0px;
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
 }

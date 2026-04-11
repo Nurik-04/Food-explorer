@@ -5,7 +5,6 @@
     right: 0;
     z-index: 1000;
     background-color: #00111A;
-    /* margin-bottom: 105px; */
 }
 
 .header__nav {
@@ -13,8 +12,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-left: 1px solid #82F3FF;
-    border-right: 1px solid #82F3FF;
     height: 80px;
 }
 
@@ -24,64 +21,113 @@
 }
 
 .header__form {
+    position: relative; /* Natijalar chiqishi uchun ota element */
     width: 550px;
     height: 48px;
-    padding: 12px 14px;
-    gap: 14px;
+    padding: 0 14px;
     border-radius: 5px;
     background-color: #0D1D25;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .header__input__icon {
     width: 24px;
     height: 24px;
     color: #C4C4CC;
+    margin-right: 14px;
 }
 
 .header__input {
-    font-family: Roboto;
-    font-weight: 400;
-    font-style: Regular;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
     font-size: 16px;
-    width: 344px;
-    height: 100%;
+    width: 100%;
 }
 
+/* --- Highlight stili --- */
+.highlight {
+    background-color: #FFD700; /* Sariq rang */
+    color: #000000;
+    padding: 0 1px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* --- Dropdown Natijalari --- */
+.header__search-results {
+    position: absolute;
+    top: 55px; /* Formaning pastidan joylashadi */
+    left: 0;
+    right: 0;
+    background: #00111A;
+    border: 1px solid #1c2227;
+    border-radius: 8px;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 999;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-item:hover {
+    background: #0D1D25;
+}
+
+.search-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.search-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-item-name {
+    color: #E1E1E6;
+    font-size: 14px;
+}
+
+.search-item-price {
+    color: #82F3FF;
+    font-size: 12px;
+}
+
+/* --- Tugma va boshqa elementlar --- */
 .header__btn {
     width: 160px;
     height: 40px;
-    padding: 12px 32px;
-    gap: 8px;
     border-radius: 5px;
     background-color: #750310;
+    color: white;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: rgb(171, 39, 59) 0px 10px 0px 0px;
-    font-family: Roboto;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-/* From Uiverse.io by absoluteSTrange */
-
-.header__btn:hover {
-    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+    box-shadow: #ab273b 0px 4px 0px 0px;
 }
 
 .header__btn:active {
-    background-color: rgb(255, 56, 86);
-    /*50, 168, 80*/
-    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
-    transform: translateY(5px);
-    transition: 200ms;
+    transform: translateY(2px);
+    box-shadow: none;
 }
 
 .header__exit__icon {
