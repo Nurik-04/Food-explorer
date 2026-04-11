@@ -43,7 +43,7 @@ const LoginPage = ({setIsLogin}) => {
                 <div>
                     <label className='login__lable' htmlFor="email">Email: <span className='login__span'>com</span></label>
                     <input
-                        type="email"
+                        type="text"
                         id='email'
                         placeholder='Exemplo: exemplo@exemplo.com.br'
                         required
